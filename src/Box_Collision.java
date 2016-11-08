@@ -1,8 +1,8 @@
-import java.awt.Rectangle;
-import java.awt.Graphics;
-import java.awt.Color;
+//import java.awt.Rectangle;
+//import java.awt.Graphics;
+//import java.awt.Color;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
+//import javax.swing.JPanel;
 
 public class Box_Collision  {
 	JFrame frame;
@@ -13,7 +13,7 @@ public static void main(String[] args) {
 Box_Collision(){
 	frame= new JFrame();
 	panel=new GamePanel();
-	Rectangle square= new Rectangle();
+//	Rectangle square= new Rectangle();
 	setup();
 }
 	void setup(){
@@ -21,6 +21,7 @@ Box_Collision(){
 		frame.setSize(500, 500);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		panel.startGame();
 }
 	
 }
