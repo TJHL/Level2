@@ -4,8 +4,8 @@ public class Box_Collision  {
 	
 	JFrame frame;
 	GamePanel panel;
-	static final int WIDTH = 500;
-	static final int HEIGHT = 500;
+	static final int WIDTH = 800;
+	static final int HEIGHT = 800;
 	
 	public static void main(String[] args) {
 	

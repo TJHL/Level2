@@ -11,6 +11,7 @@ public class Box {
 	int speedx;
 	int speedy;
 	boolean alive;
+	
 	Box(Color color, int height, int width,int x,int y, int speedx, int speedy, boolean alive){
 		this.color = color;
 		this.height=height;
@@ -26,12 +27,24 @@ public class Box {
 	
 	}
 	void draw(Graphics g){
-		g.setColor(Color.RED);
-		//g.fillRect(x, y, width, height);
-		g.fillRect(100, 100, 20, 20);
+		g.setColor(color);
+		g.fillRect(x, y, height, width);
 		
 	}
 	void update(){
-	
+		x=x+speedx;
+		y=y+speedy;
+		if(x>Box_Collision.WIDTH-width){
+			speedx=-speedx;
+		}
+		if(x<=0){
+			speedx=-speedx;
+		}
+		if(y>Box_Collision.HEIGHT-height){
+			speedy=-speedy;
+		}
+		if(y<=0){
+			speedy=-speedy;
+		}
 	}
 }
