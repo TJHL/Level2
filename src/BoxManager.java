@@ -61,9 +61,12 @@ public class BoxManager {
 			for (int i = 0; i < Fodder.size(); i++) {
 				if(Fodder.get(i).isalive()== false){
 					Fodder.remove(i);
+					Grow();
 				}
 			}
-				
-			
+		}
+		void Grow(){
+			fat.width=fat.width+1;
+			fat.height=fat.height+1;
 		}
 }

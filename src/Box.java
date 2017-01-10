@@ -34,17 +34,23 @@ public class Box {
 	void update(){
 		x=x+speedx;
 		y=y+speedy;
-		if(x>Box_Collision.WIDTH-width){
+		if(x>=Box_Collision.WIDTH-width){
 			speedx=-speedx;
 		}
 		if(x<=0){
 			speedx=-speedx;
 		}
-		if(y>Box_Collision.HEIGHT-height){
+		if(y>=Box_Collision.HEIGHT-height){
 			speedy=-speedy;
 		}
 		if(y<=0){
 			speedy=-speedy;
+		}
+		if(x+width >= Box_Collision.WIDTH){
+			x=Box_Collision.WIDTH-width;
+		}
+		if(y+height >= Box_Collision.HEIGHT){
+			y=Box_Collision.HEIGHT-height;
 		}
 	}
 }
